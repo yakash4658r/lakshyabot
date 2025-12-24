@@ -1,0 +1,1747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lakshya Fashion Boutique - Your Style Statement</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #6a4c93;
+            --secondary-color: #ff6b6b;
+            --accent-color: #feca57;
+            --dark-color: #333;
+            --light-color: #f8f9fa;
+            --text-color: #555;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            color: var(--dark-color);
+        }
+        
+        a {
+            text-decoration: none;
+            color: var(--primary-color);
+            transition: all 0.3s ease;
+        }
+        
+        a:hover {
+            color: var(--secondary-color);
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-top {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 8px 0;
+            font-size: 14px;
+        }
+        
+        .header-top .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .main-header {
+            padding: 15px 0;
+        }
+        
+        .main-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 80px;
+            margin-right: 15px;
+        }
+        
+        .logo-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        .logo-tagline {
+            font-size: 14px;
+            color: #777;
+            font-style: italic;
+        }
+        
+        .header-icons {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .header-icons a {
+            color: var(--dark-color);
+            font-size: 20px;
+            position: relative;
+        }
+        
+        /* Navigation */
+        nav {
+            background-color: #f8f8f8;
+            border-top: 1px solid #eee;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            justify-content: center;
+        }
+        
+        .nav-menu li {
+            position: relative;
+        }
+        
+        .nav-menu a {
+            display: block;
+            padding: 15px 20px;
+            color: var(--dark-color);
+            font-weight: 500;
+            text-transform: uppercase;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+        }
+        
+        .nav-menu a:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: white;
+            min-width: 200px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            visibility: hidden;
+            z-index: 100;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-menu li:hover .dropdown {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .dropdown li {
+            width: 100%;
+        }
+        
+        .dropdown a {
+            padding: 12px 20px;
+            text-transform: capitalize;
+            font-size: 14px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .dropdown a:hover {
+            background-color: #f8f8f8;
+            color: var(--primary-color);
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 600px;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            padding: 0 20px;
+            animation: fadeInUp 1s ease;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 30px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 14px;
+        }
+        
+        .btn:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid white;
+            margin-left: 10px;
+        }
+        
+        .btn-outline:hover {
+            background-color: white;
+            color: var(--primary-color);
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 60px 0;
+            background-color: var(--light-color);
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .feature-card {
+            background-color: white;
+            padding: 30px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-icon {
+            font-size: 40px;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .feature-card h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        
+        /* About Section */
+        .about {
+            padding: 80px 0;
+        }
+        
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .about-image {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+        
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        .about-content h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .about-content h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 70px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+        
+        .about-content p {
+            margin-bottom: 20px;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+        
+        /* Products Section */
+        .products {
+            padding: 80px 0;
+            background-color: var(--light-color);
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-header h2 {
+            font-size: 36px;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+        
+        .section-header h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+        
+        .section-header p {
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 16px;
+        }
+        
+        .product-categories {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .category-btn {
+            padding: 8px 20px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        .category-btn.active,
+        .category-btn:hover {
+            background-color: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        
+        .product-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .product-image {
+            position: relative;
+            height: 300px;
+            overflow: hidden;
+        }
+        
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .product-card:hover .product-image img {
+            transform: scale(1.1);
+        }
+        
+        .product-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .product-card:hover .product-overlay {
+            opacity: 1;
+        }
+        
+        .product-actions {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .action-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--dark-color);
+            transition: all 0.3s ease;
+        }
+        
+        .action-btn:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .product-info {
+            padding: 20px;
+        }
+        
+        .product-category {
+            font-size: 12px;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+        
+        .product-name {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--dark-color);
+        }
+        
+        .product-code {
+            font-size: 14px;
+            color: #777;
+            margin-bottom: 10px;
+        }
+        
+        .inquiry-btn {
+            display: inline-block;
+            padding: 8px 15px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 14px;
+        }
+        
+        .inquiry-btn:hover {
+            background-color: var(--secondary-color);
+        }
+        
+        /* Collections Section */
+        .collections {
+            padding: 80px 0;
+            background: linear-gradient(rgba(106, 76, 147, 0.8), rgba(106, 76, 147, 0.8)), url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80') center/cover no-repeat;
+            color: white;
+            text-align: center;
+        }
+        
+        .collection-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .collection-content h2 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            color: white;
+        }
+        
+        .collection-content p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+        
+        /* Testimonials Section */
+        .testimonials {
+            padding: 80px 0;
+            background-color: var(--light-color);
+        }
+        
+        .testimonials-slider {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .testimonial-card {
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+        
+        .testimonial-text {
+            font-size: 18px;
+            font-style: italic;
+            margin-bottom: 30px;
+            line-height: 1.6;
+            position: relative;
+        }
+        
+        .testimonial-text:before {
+            content: '"';
+            font-size: 60px;
+            color: var(--primary-color);
+            opacity: 0.2;
+            position: absolute;
+            top: -20px;
+            left: -20px;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .author-image {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 15px;
+        }
+        
+        .author-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .author-info h4 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        
+        .author-info p {
+            font-size: 14px;
+            color: #999;
+        }
+        
+        .slider-dots {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 30px;
+        }
+        
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #ddd;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .dot.active {
+            background-color: var(--primary-color);
+            width: 30px;
+            border-radius: 6px;
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: 80px 0;
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+        
+        .contact-info {
+            padding: 30px;
+            background-color: var(--light-color);
+            border-radius: 8px;
+        }
+        
+        .contact-info h3 {
+            font-size: 24px;
+            margin-bottom: 30px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .contact-info h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+        
+        .contact-icon {
+            font-size: 20px;
+            color: var(--primary-color);
+            margin-right: 15px;
+            margin-top: 5px;
+        }
+        
+        .contact-text h4 {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+        
+        .contact-text p {
+            font-size: 15px;
+            color: #666;
+        }
+        
+        .contact-form {
+            padding: 30px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .form-control:focus {
+            border-color: var(--primary-color);
+            outline: none;
+        }
+        
+        textarea.form-control {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: #aaa;
+            padding: 70px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+        
+        .footer-widget h3 {
+            font-size: 20px;
+            color: white;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .footer-widget h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+        
+        .footer-widget p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links a {
+            color: #aaa;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary-color);
+            padding-left: 5px;
+        }
+        
+        .footer-social {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-3px);
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid #333;
+            padding-top: 20px;
+            text-align: center;
+            font-size: 14px;
+        }
+        
+        /* Responsive Styles */
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        
+        @media (max-width: 992px) {
+            .about-container,
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-menu {
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+                display: none;
+            }
+            
+            .nav-menu.active {
+                display: flex;
+            }
+            
+            .nav-menu li {
+                width: 100%;
+            }
+            
+            .dropdown {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                box-shadow: none;
+                display: none;
+            }
+            
+            .nav-menu li:hover .dropdown {
+                display: block;
+            }
+            
+            .menu-toggle {
+                display: block;
+            }
+            
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .hero p {
+                font-size: 16px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-top {
+                display: none;
+            }
+            
+            .header-icons {
+                gap: 15px;
+            }
+            
+            .products-grid {
+                grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .logo img {
+                height: 60px;
+            }
+            
+            .logo-text {
+                font-size: 18px;
+            }
+            
+            .section-header h2 {
+                font-size: 28px;
+            }
+            
+            .about-content h2 {
+                font-size: 28px;
+            }
+            
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+        
+        .fade-in.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <div class="header-info">
+                    <i class="fas fa-phone"></i> +91 9003146790
+                    <span style="margin-left: 20px;"><i class="fas fa-envelope"></i> info@lakshyafashionboutique.com</span>
+                </div>
+                <div class="header-links">
+                    <a href="#">Store Locator</a>
+                    <a href="#">Book Appointment</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="main-header">
+            <div class="container">
+                <div class="logo">
+                    <img src="https://z-cdn-media.chatglm.cn/files/754f8dbe-8c54-4890-9180-a1e9a9030dd9_pasted_image_1762883728100.png?auth_key=1862883786-d2f353f68e6749b8aa4cc574b7481e95-0-50b10cc1bf65c324b1009d2156bca04f" alt="Lakshya Fashion Boutique">
+                    <div>
+                        <div class="logo-text">Lakshya Fashion Boutique</div>
+                        <div class="logo-tagline">Your Style Statement!</div>
+                    </div>
+                </div>
+                
+                <div class="header-icons">
+                    
+                    <div class="menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <nav>
+            <div class="container">
+                <ul class="nav-menu">
+                    <li><a href="#">Home</a></li>
+                    <li>
+                        <a href="#">Catalog</a>
+                        <ul class="dropdown">
+                            <li><a href="#chudithar">Chudithar and Materials</a></li>
+                            <li><a href="#kurtis">Kurtis</a></li>
+                            <li><a href="#leggings">Leggings</a></li>
+                            <li><a href="#patiala">Patiala</a></li>
+                            <li><a href="#blouses">Readymade Blouses</a></li>
+                            <li><a href="#blouse-materials">Blouse Materials</a></li>
+                            <li><a href="#aari">Aari Work</a></li>
+                            <li><a href="#tailoring">Unisex Tailoring</a></li>
+                            <li><a href="#western">Western Wears</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#">Collections</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Discover Your Perfect Style</h1>
+            <p>Explore our exclusive collection of ethnic and western wear that reflects your unique personality</p>
+            <a href="#products" class="btn">View Catalog</a>
+            <a href="#contact" class="btn btn-outline">Enquiry for product</a>
+        </div>
+    </section>
+    
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h3>Personalized Styling</h3>
+                    <p>Book an appointment for personalized fashion consultation</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-ruler-combined"></i>
+                    </div>
+                    <h3>Custom Tailoring</h3>
+                    <p>Get outfits tailored to your exact measurements</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Exclusive Designs</h3>
+                    <p>Unique designs you won't find anywhere else</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Expert Assistance</h3>
+                    <p>Our fashion experts are here to help you</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-container">
+                <div class="about-image fade-in">
+                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="About Lakshya Fashion Boutique">
+                </div>
+                <div class="about-content fade-in">
+                    <h2>About Lakshya Fashion Boutique</h2>
+                    <p>Welcome to Lakshya Fashion Boutique, where tradition meets contemporary style. Established with a vision to redefine fashion for modern woman, we bring you an exquisite collection of ethnic and western wear that celebrates your individuality.</p>
+                    <p>Our journey began with a simple mission - to provide high-quality, fashionable clothing that makes every woman feel confident and beautiful. Over the years, we've curated an impressive collection that includes everything from traditional Chudithars to trendy Western wears, all crafted with precision and attention to detail.</p>
+                    <p>At Lakshya, we believe that fashion is not just about clothing; it's about self-expression. Our team of skilled designers and tailors work tirelessly to create pieces that are not just stylish but also comfortable and affordable.</p>
+                    <p>Whether you're looking for the perfect outfit for a special occasion or everyday wear, you'll find it at Lakshya Fashion Boutique. Come, explore our collection and discover your style statement with us!</p>
+                    <a href="#contact" class="btn">Book Appointment</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Collection</h2>
+                <p>Explore our diverse collection of ethnic and western wear designed to elevate your style</p>
+            </div>
+            
+            <div class="product-categories">
+                <button class="category-btn active" data-category="all">All Products</button>
+                <button class="category-btn" data-category="chudithar">Chudithar and Materials</button>
+                <button class="category-btn" data-category="kurtis">Kurtis</button>
+                <button class="category-btn" data-category="leggings">Leggings</button>
+                <button class="category-btn" data-category="patiala">Patiala</button>
+                <button class="category-btn" data-category="blouses">Readymade Blouses</button>
+                <button class="category-btn" data-category="blouse-materials">Blouse Materials</button>
+                <button class="category-btn" data-category="aari">Aari Work</button>
+                <button class="category-btn" data-category="tailoring">Unisex Tailoring</button>
+                <button class="category-btn" data-category="western">Western Wears</button>
+            </div>
+            
+            <div class="products-grid">
+                <!-- Chudithar and Materials -->
+                <div class="product-card" data-category="chudithar">
+                    <div class="product-image">
+                        <!-- ADD YOUR CHUDITHAR IMAGE 1 HERE -->
+                        <img src="images/Chudithar1.png" alt="Designer Chudithar">
+                        <div class="product-overlay">
+                            <div class="product-actions">
+                                <a href="#contact" class="action-btn"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Chudithar and Materials</div>
+                        <!-- CHANGE PRODUCT NAME 1 HERE -->
+                        <h3 class="product-name">Your Chudithar Name 1</h3>
+                        <div class="product-code">Product Code: CF-2023-001</div>
+                        <button class="inquiry-btn">Inquire About This Design</button>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-category="chudithar">
+                    <div class="product-image">
+                        <!-- ADD YOUR CHUDITHAR IMAGE 2 HERE -->
+                        <img src="images/Chudithar 2.png" alt="Cotton Chudithar">
+                        <div class="product-overlay">
+                            <div class="product-actions">
+                                <a href="#contact" class="action-btn"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Chudithar and Materials</div>
+                        <!-- CHANGE PRODUCT NAME 2 HERE -->
+                        <h3 class="product-name">Your Chudithar Name 2</h3>
+                        <div class="product-code">Product Code: CM-2023-015</div>
+                        <button class="inquiry-btn">Inquire About This Design</button>
+                    </div>
+                </div>
+                
+                <!-- Kurtis -->
+                <div class="product-card" data-category="kurtis">
+                    <div class="product-image">
+                        <!-- ADD YOUR KURTI IMAGE 1 HERE -->
+                        <img src="images/Kurtis1.png" alt="Printed Kurti">
+                        <div class="product-overlay">
+                            <div class="product-actions">
+                                <a href="#contact" class="action-btn"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Kurtis</div>
+                        <!-- CHANGE PRODUCT NAME 3 HERE -->
+                        <h3 class="product-name">Your Kurti Name 1</h3>
+                        <div class="product-code">Product Code: KU-2023-023</div>
+                        <button class="inquiry-btn">Inquire About This Design</button>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-category="kurtis">
+                    <div class="product-image">
+                        <!-- ADD YOUR KURTI IMAGE 2 HERE -->
+                        <img src="images/Kurtis2.png" alt="Embroidered Kurti">
+                        <div class="product-overlay">
+                            <div class="product-actions">
+                                <a href="#contact" class="action-btn"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Kurtis</div>
+                        <!-- CHANGE PRODUCT NAME 4 HERE -->
+                        <h3 class="product-name">Your Kurti Name 2</h3>
+                        <div class="product-code">Product Code: KU-2023-041</div>
+                        <button class="inquiry-btn">Inquire About This Design</button>
+                    </div>
+                </div>
+                
+                <!-- Leggings -->
+                <div class="product-card" data-category="leggings">
+                    <div class="product-image">
+                        <!-- ADD YOUR LEGGINGS IMAGE 1 HERE -->
+                        <img src="images/Leggings1.png" alt="Cotton Leggings">
+                        <div class="product-overlay">
+                            <div class="product-actions">
+                                <a href="#contact" class="action-btn"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Leggings</div>
+                        <!-- CHANGE PRODUCT NAME 5 HERE -->
+                        <h3 class="product-name">Your Leggings Name 1</h3>
+                        <div class="product-code">Product Code: LG-2023-018</div>
+                        <button class="inquiry-btn">Inquire About This Design</button>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-category="leggings">
+                    <div class="product-image">
+                        <!-- ADD YOUR LEGGINGS IMAGE 2 HERE -->
+                        <img src="images/Leggings2.png" alt="Printed Leggings">
+                        <div class="product-overlay">
+                            <div class="product-actions">
+                                <a href="#contact" class="action-btn"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Leggings</div>
+                        <!-- CHANGE PRODUCT NAME 6 HERE -->
+                        <h3 class="product-name">Your Leggings Name 2</h3>
+                        <div class="product-code">Product Code: LG-2023-025</div>
+                        <button class="inquiry-btn">Inquire About This Design</button>
+                    </div>
+                </div>
+                
+                <!-- Patiala -->
+                <div class="product-card" data-category="patiala">
+                    <div class="product-image">
+                        <!-- ADD YOUR PATIALA IMAGE 1 HERE -->
+                        <img src="images/Patiala1.png" alt="Patiala Salwar">
+                        <div class="product-overlay">
+                            <div class="product-actions">
+                                <a href="#contact" class="action-btn"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Patiala</div>
+                        <!-- CHANGE PRODUCT NAME 7 HERE -->
+                        <h3 class="product-name">Your Patiala Name 1</h3>
+                        <div class="product-code">Product Code: PT-2023-009</div>
+                        <button class="inquiry-btn">Inquire About This Design</button>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-category="patiala">
+                    <div class="product-image">
+                        <!-- ADD YOUR PATIALA IMAGE 2 HERE -->
+                        <img src="images/Patiala2.png" alt="Cotton Patiala">
+                        <div class="product-overlay">
+                            <div class="product-actions">
+                                <a href="#contact" class="action-btn"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Patiala</div>
+                        <!-- CHANGE PRODUCT NAME 8 HERE -->
+                        <h3 class="product-name">Your Patiala Name 2</h3>
+                        <div class="product-code">Product Code: PT-2023-017</div>
+                        <button class="inquiry-btn">Inquire About This Design</button>
+                    </div>
+                </div>
+                
+                <!-- Readymade Blouses -->
+                <div class="product-card" data-category="blouses">
+                    <div class="product-image">
+                        <!-- ADD YOUR BLOUSE IMAGE 1 HERE -->
+                        <img src="images/Readymade Blouses1.png" alt="Designer Blouse">
+                        <div class="product-overlay">
+                            <div class="product-actions">
+                                <a href="#contact" class="action-btn"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Readymade Blouses</div>
+                        <!-- CHANGE PRODUCT NAME 9 HERE -->
+                        <h3 class="product-name">Your Blouse Name 1</h3>
+                        <div class="product-code">Product Code: BL-2023-027</div>
+                        <button class="inquiry-btn">Inquire About This Design</button>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-category="blouses">
+                    <div class="product-image">
+                        <!-- ADD YOUR BLOUSE IMAGE 2 HERE -->
+                        <img src="images/Readymade Blouses2.png" alt="Traditional Blouse">
+                        <div class="product-overlay">
+                            <div class="product-actions">
+                                <a href="#contact" class="action-btn"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Readymade Blouses</div>
+                        <!-- CHANGE PRODUCT NAME 10 HERE -->
+                        <h3 class="product-name">Your Blouse Name 2</h3>
+                        <div class="product-code">Product Code: BL-2023-033</div>
+                        <button class="inquiry-btn">Inquire About This Design</button>
+                    </div>
+                </div>
+                
+                <!-- Blouse Materials -->
+                <div class="product-card" data-category="blouse-materials">
+                    <div class="product-image">
+                        <!-- ADD YOUR BLOUSE MATERIAL IMAGE 1 HERE -->
+                        <img src="images/Blouse (Plain1.png" alt="Blouse Material">
+                        <div class="product-overlay">
+                            <div class="product-actions">
+                                <a href="#contact" class="action-btn"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Blouse Materials</div>
+                        <!-- CHANGE PRODUCT NAME 11 HERE -->
+                        <h3 class="product-name">Your Blouse Material Name 1</h3>
+                        <div class="product-code">Product Code: BM-2023-034</div>
+                        <button class="inquiry-btn">Inquire About This Design</button>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-category="blouse-materials">
+                    <div class="product-image">
+                        <!-- ADD YOUR BLOUSE MATERIAL IMAGE 2 HERE -->
+                        <img src="images/Blouse (Plain2.png" alt="Designer Blouse Material">
+                        <div class="product-overlay">
+                            <div class="product-actions">
+                                <a href="#contact" class="action-btn"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Blouse Materials</div>
+                        <!-- CHANGE PRODUCT NAME 12 HERE -->
+                        <h3 class="product-name">Your Blouse Material Name 2</h3>
+                        <div class="product-code">Product Code: BM-2023-042</div>
+                        <button class="inquiry-btn">Inquire About This Design</button>
+                    </div>
+                </div>
+                
+                <!-- Aari Work -->
+                <div class="product-card" data-category="aari">
+                    <div class="product-image">
+                        <!-- ADD YOUR AARI WORK IMAGE 1 HERE -->
+                        <img src="images/Aari Work Blouses 1.png" alt="Aari Work Saree">
+                        <div class="product-overlay">
+                            <div class="product-actions">
+                                <a href="#contact" class="action-btn"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Aari Work</div>
+                        <!-- CHANGE PRODUCT NAME 13 HERE -->
+                        <h3 class="product-name">Your Aari Work Name 1</h3>
+                        <div class="product-code">Product Code: AR-2023-012</div>
+                        <button class="inquiry-btn">Inquire About This Design</button>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-category="aari">
+                    <div class="product-image">
+                        <!-- ADD YOUR AARI WORK IMAGE 2 HERE -->
+                        <img src="images/Aari Work Blouses2.png" alt="Aari Work Blouse">
+                        <div class="product-overlay">
+                            <div class="product-actions">
+                                <a href="#contact" class="action-btn"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Aari Work</div>
+                        <!-- CHANGE PRODUCT NAME 14 HERE -->
+                        <h3 class="product-name">Your Aari Work Name 2</h3>
+                        <div class="product-code">Product Code: AR-2023-028</div>
+                        <button class="inquiry-btn">Inquire About This Design</button>
+                    </div>
+                </div>
+                
+                <!-- Unisex Tailoring -->
+                <div class="product-card" data-category="tailoring">
+                    <div class="product-image">
+                        <!-- ADD YOUR TAILORING IMAGE 1 HERE -->
+                        <img src="images/unisex1.png" alt="Custom Tailoring">
+                        <div class="product-overlay">
+                            <div class="product-actions">
+                                <a href="#contact" class="action-btn"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Unisex Tailoring</div>
+                        <!-- CHANGE PRODUCT NAME 15 HERE -->
+                        <h3 class="product-name">Your Tailoring Service 1</h3>
+                        <div class="product-code">Service Code: UT-2023-001</div>
+                        <button class="inquiry-btn">Inquire About This Service</button>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-category="tailoring">
+                    <div class="product-image">
+                        <!-- ADD YOUR TAILORING IMAGE 2 HERE -->
+                        <img src="images/unisex2.png" alt="Pant Tailoring">
+                        <div class="product-overlay">
+                            <div class="product-actions">
+                                <a href="#contact" class="action-btn"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Unisex Tailoring</div>
+                        <!-- CHANGE PRODUCT NAME 16 HERE -->
+                        <h3 class="product-name">Your Tailoring Service 2</h3>
+                        <div class="product-code">Service Code: UT-2023-005</div>
+                        <button class="inquiry-btn">Inquire About This Service</button>
+                    </div>
+                </div>
+                
+                <!-- Western Wears -->
+                <div class="product-card" data-category="western">
+                    <div class="product-image">
+                        <!-- ADD YOUR WESTERN WEAR IMAGE 1 HERE -->
+                        <img src="images/Western Wears1.png" alt="Western Dress">
+                        <div class="product-overlay">
+                            <div class="product-actions">
+                                <a href="#contact" class="action-btn"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Western Wears</div>
+                        <!-- CHANGE PRODUCT NAME 17 HERE -->
+                        <h3 class="product-name">Your Western Wear Name 1</h3>
+                        <div class="product-code">Product Code: WE-2023-021</div>
+                        <button class="inquiry-btn">Inquire About This Design</button>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-category="western">
+                    <div class="product-image">
+                        <!-- ADD YOUR WESTERN WEAR IMAGE 2 HERE -->
+                        <img src="images/Western Wears2.png" alt="Casual Western Top">
+                        <div class="product-overlay">
+                            <div class="product-actions">
+                                <a href="#contact" class="action-btn"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Western Wears</div>
+                        <!-- CHANGE PRODUCT NAME 18 HERE -->
+                        <h3 class="product-name">Your Western Wear Name 2</h3>
+                        <div class="product-code">Product Code: WE-2023-035</div>
+                        <button class="inquiry-btn">Inquire About This Design</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Collections Section -->
+    <section class="collections">
+        <div class="container">
+            <div class="collection-content">
+                <h2>Exclusive Seasonal Collection</h2>
+                <p>Discover our latest seasonal collection featuring unique designs and premium fabrics</p>
+                <a href="#contact" class="btn">Book Appointment to View</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Customers Say</h2>
+                <p>Don't just take our word for it - hear from our satisfied customers</p>
+            </div>
+            
+            <div class="testimonials-slider">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">I absolutely love the collection at Lakshya Fashion Boutique! The quality is exceptional and the designs are so unique. I always receive compliments when I wear their outfits.</p>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Customer">
+                        </div>
+                        <div class="author-info">
+                            <h4>Priya Sharma</h4>
+                            <p>Regular Customer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="slider-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <p>Book an appointment or send us an inquiry about our designs</p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    
+                    <div class="contact-item">
+  <div class="contact-icon">
+    <i class="fas fa-map-marker-alt"></i>
+  </div>
+  <div class="contact-text">
+    <h4>Address</h4>
+    <p>
+      <a href="https://www.google.com/maps?q=NO+608,+POONAMALLEE+HIGH+ROAD,+ARUMBAKKAM,+CHENNAI+600106" target="_blank" style="text-decoration:none; color:inherit;">
+        NO 608, POONAMALLEE HIGH ROAD, ARUMBAKKAM<br>
+        CHENNAI 600 106
+      </a>
+    </p>
+  </div>
+</div>
+
+<div class="contact-item">
+  <div class="contact-icon">
+    <i class="fas fa-phone"></i>
+  </div>
+  <div class="contact-text">
+    <h4>Phone</h4>
+    <p>
+      <a href="tel:+919003146790" style="text-decoration:none; color:inherit;">
+        +91 9003146790
+      </a>
+    </p>
+  </div>
+</div>
+
+<div class="contact-item">
+  <div class="contact-icon">
+    <i class="fas fa-envelope"></i>
+  </div>
+  <div class="contact-text">
+    <h4>Email</h4>
+    <p>
+      <a href="mailto:lakshmiyuvaraj3@gmail.com" style="text-decoration:none; color:inherit;">
+        lakshmiyuvaraj3@gmail.com
+      </a>
+    </p>
+  </div>
+</div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Working Hours</h4>
+                            <p>Monday - Saturday: 10:00 AM - 8:00 PM<br>Sunday: 11:00 AM - 6:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="inquiry-type">Inquiry Type</label>
+                            <select id="inquiry-type" class="form-control" required>
+                                <option value="">Select an option</option>
+                                <option value="appointment">Book Appointment</option>
+                                <option value="design-inquiry">Design Inquiry</option>
+                                <option value="custom-order">Custom Order</option>
+                                <option value="general">General Information</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" class="form-control" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn">Send Inquiry</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-widget">
+                    <h3>About Lakshya</h3>
+                    <p>Lakshya Fashion Boutique is your one-stop destination for all your fashion needs. We offer a wide range of ethnic and western wear that reflects your unique style.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-widget">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Book Appointment</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-widget">
+                    <h3>Catalog</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Chudithar and Materials</a></li>
+                        <li><a href="#">Kurtis</a></li>
+                        <li><a href="#">Leggings</a></li>
+                        <li><a href="#">Patiala</a></li>
+                        <li><a href="#">Readymade Blouses</a></li>
+                        <li><a href="#">Blouse Materials</a></li>
+                        <li><a href="#">Aari Work</a></li>
+                        <li><a href="#">Unisex Tailoring</a></li>
+                        <li><a href="#">Western Wears</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Lakshya Fashion Boutique. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Mobile Menu Toggle
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        });
+        
+        // Product Category Filter
+        const categoryButtons = document.querySelectorAll('.category-btn');
+        const productCards = document.querySelectorAll('.product-card');
+        
+        categoryButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                categoryButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                button.classList.add('active');
+                
+                const category = button.getAttribute('data-category');
+                
+                productCards.forEach(card => {
+                    if (category === 'all' || card.getAttribute('data-category') === category) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+        
+        // Testimonial Slider
+        const dots = document.querySelectorAll('.dot');
+        let currentSlide = 0;
+        
+        // Function to change slide
+        function changeSlide(index) {
+            dots.forEach(dot => dot.classList.remove('active'));
+            dots[index].classList.add('active');
+            currentSlide = index;
+        }
+        
+        // Add click event to dots
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                changeSlide(index);
+            });
+        });
+        
+        // Auto change slide
+        setInterval(() => {
+            currentSlide = (currentSlide + 1) % dots.length;
+            changeSlide(currentSlide);
+        }, 5000);
+        
+        // Form Submissions
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your inquiry! We will get back to you soon to schedule your appointment.');
+            this.reset();
+        });
+        
+        // Scroll Animations
+        const fadeElements = document.querySelectorAll('.fade-in');
+        
+        function checkFade() {
+            fadeElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('active');
+                }
+            });
+        }
+        
+        window.addEventListener('scroll', checkFade);
+        checkFade(); // Check on initial load
+        
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+<df-messenger
+  intent="WELCOME"
+  chat-title="BoutiqueBot"
+  agent-id="8de9fc26-1b26-40ce-b2bb-a004384f2281"
+  language-code="en"
+></df-messenger>
+
+
+
+
+
+
+</body>
+</html>
